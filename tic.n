@@ -1,0 +1,133 @@
+array int , square , 9
+
+def int checkWin() {
+    if ( square [0] == square [1] && square [1] == square [2] )  {
+		return 1
+    }
+	elif ( square [3] == square [4] && square [4] == square [5] )  {
+		return 1
+    }
+	elif ( square [6] == square [7] && square [7] == square [8] )  {
+		return 1
+    }
+	elif ( square [0] == square [3] && square [3] == square [6] )  {
+		return 1
+    }
+	elif ( square [1] == square [4] && square [4] == square [7] )  {
+		return 1
+    }
+	elif ( square [2] == square [5] && square [5] == square [8] )  {
+		return 1
+    }
+	elif ( square [0] == square [4] && square [4] == square [8] )  {
+		return 1
+    }
+	elif ( square [2] == square [4] && square [4] == square [6] )  {
+		return 1
+    }
+	elif ( square [0] != 1 && square [1] != 2 && square [2] != 3 && square [3] != 4 && square [4] != 5 && square [5] != 6  && square [6] != 7 && square [7] != 8 && square [8] != 9 )  {
+		return 1
+    }
+	else {
+		return 2
+    }
+}
+
+
+def int board()  {
+    clear
+    print ( "\n\n\tTic Tac Toe\n\n" ) 
+    print ( "Player 1 (x)  - Player 2 (O) \n\n" ) 
+    print ( "\t" + square [0] + "|" + square [1] + "|" + square [2] + "\n" ) 
+    print ( "\t_|_|_\n" ) 
+    print ( "\t | | \n" ) 
+    print ( "\t" + square [3] + "|" + square [4] + "|" + square [5] + "\n" ) 
+    print ( "\t_|_|_\n" )
+    print ( "\t | | \n" ) 
+    print ( "\t" + square [6] + "|" + square [7] + "|" + square [8] + "\n" ) 
+    print ( "\t | | \n" ) 
+    return 0
+}
+
+
+_init_ {
+    int j = 0
+    while ( j < 9 ) {
+        square [j] = j + 1
+        j = j + 1
+    }
+    int player = 1
+    int i = 2
+    int choice
+    int mark
+    while ( i == 2 ) {
+        
+        board()
+        print ( "Player " + player + ", Enter a number:  " ) 
+        input choice
+
+        if ( player == 1 )  {
+            mark = 11
+        }
+        elif ( player == 2  )  {
+            mark = 0
+        }
+
+        if ( choice == 1 && square [0] == 1 )  {
+            square [0] = mark 
+        }
+        elif ( choice == 2 && square [1] == 2 )  {
+            square [1] = mark 
+        }
+        elif ( choice == 3 && square [2] == 3 )  {
+            square [2] = mark 
+        }
+        elif ( choice == 4 && square [3] == 4 )  {
+            square [3] = mark 
+        }
+        elif ( choice == 5 && square [4] == 5 )  {
+            square [4] = mark 
+        }
+        elif ( choice == 6 && square [5] == 6 )  {
+            square [5] = mark 
+        }
+        elif ( choice == 7 && square [6] == 7 )  {
+            square [6] = mark 
+        }
+        elif ( choice == 8 && square [7] == 8 )  {
+            square [7] = mark 
+        }
+        elif ( choice == 9 && square [8] == 9 )  {
+            square [8] = mark 
+        }
+        else {
+            print ( "Invalid Move" ) 
+            player = player - 1
+        }
+        i = checkWin() 
+        if ( i == 2 )  {
+            if ( player == 1 )  {
+                player = 2
+            }
+            elif ( player == 2 )  {
+                player = 1
+            }
+            elif ( player == 0 ) {
+                player = 1
+            }
+        }
+    }
+
+    board() 
+
+    if ( i == 1 )  {
+        print (  "==> Player " + player + " Win " ) 
+    }
+    else  {
+        print (  "==> Game Draw\n " ) 
+    }
+}
+
+
+
+
