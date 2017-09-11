@@ -130,6 +130,7 @@ void createCPPfile(){
 	ofstream outfile;
   	outfile.open("tic.cpp");
   	outfile <<"#include <iostream>"<<endl;
+	outfile <<"#include <cstdlib>"<<endl;
   	outfile <<"using namespace std;"<<endl; 
 	outfile.close();
 }
@@ -555,7 +556,7 @@ void isvalid_keyword(vector<string> tokens)
 
 void initialise()
 {
-   //file_name=”tic.n”;
+   //file_name=Â”tic.nÂ”;
    createLogFile();
    createCPPfile();
    keywords.push_back("_init_(");
