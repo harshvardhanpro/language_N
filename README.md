@@ -8,8 +8,12 @@ Steps:
 
 Team members - 
 [harshvardhanpro](https://github.com/harshvardhanpro)
-https://github.com/apache1305
-https://github.com/achheSharma
+
+[Ashish Pandey](https://github.com/apandey13050907)
+
+[Akshay Sharma](https://github.com/achheSharma)
+
 Prashant
+
 Ekam
                
