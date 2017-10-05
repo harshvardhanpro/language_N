@@ -7,7 +7,7 @@ Steps:
 4. Play the TIC-TAC-TOE game. Enjoy !!
 
 Team members - 
-harshvardhanpro(https://github.com/harshvardhanpro)
+[harshvardhanpro](https://github.com/harshvardhanpro)
 https://github.com/apache1305
 https://github.com/achheSharma
 Prashant
